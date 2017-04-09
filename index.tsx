@@ -1,5 +1,5 @@
 import { IAugmentedJQuery, IComponentOptions } from 'angular'
-import fromPairs from 'lodash.frompairs'
+//import fromPairs from 'lodash.frompairs'
 import NgComponent from 'ngcomponent'
 import * as React from 'react'
 import { render, unmountComponentAtNode } from 'react-dom'
@@ -22,6 +22,18 @@ export function react2angular<Props>(
   const names = bindingNames
     || (Class.propTypes && Object.keys(Class.propTypes))
     || []
+
+  const fromPairs = (pairs: any) => {
+    var index = -1,
+        length:any = pairs ? pairs.length : 0,
+        result:any = {};
+
+    while (++index < length) {
+      var pair:any = pairs[index];
+      result[pair[0]] = pair[1];
+    }
+    return result;
+  };
 
   return {
     bindings: fromPairs(names.map(_ => [_, '<'])),
