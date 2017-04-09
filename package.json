@@ -1,31 +1,78 @@
 {
-  "name": "react2angular",
-  "version": "1.1.2",
-  "description": "The easiest way to embed React components in Angular 1 apps!",
-  "main": "index.js",
-  "main:esnext": "index.es2015.js",
-  "typings": "index.d.ts",
-  "scripts": {
-    "build": "npm run clean; tsc -d -m es2015 && mv ./index.js ./index.es2015.js && tsc -m commonjs -t es5",
-    "clean": "rm ./*.d.ts; rm ./*.map; exit 0",
-    "pretest": "npm run build",
-    "prepublish": "npm test",
-    "test": "karma start --single-run",
-    "tdd": "npm-run-all -pr watch:*",
-    "watch:ts": "tsc -w",
-    "watch:test": "karma start"
+  "_args": [
+    [
+      {
+        "raw": "react2angular@git+https://kinging123@github.com/kinging123/react2angular.git",
+        "scope": null,
+        "escapedName": "react2angular",
+        "name": "react2angular",
+        "rawSpec": "git+https://kinging123@github.com/kinging123/react2angular.git",
+        "spec": "git+https://kinging123@github.com/kinging123/react2angular.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:kinging123/react2angular.git",
+          "sshUrl": "git+ssh://git@github.com/kinging123/react2angular.git",
+          "httpsUrl": "git+https://kinging123@github.com/kinging123/react2angular.git",
+          "gitUrl": "git://kinging123@github.com/kinging123/react2angular.git",
+          "shortcut": "github:kinging123/react2angular",
+          "directUrl": "https://kinging123@raw.githubusercontent.com/kinging123/react2angular/master/package.json"
+        }
+      },
+      "/Users/reuven/tline"
+    ]
+  ],
+  "_from": "git+https://kinging123@github.com/kinging123/react2angular.git",
+  "_id": "react2angular@1.1.2",
+  "_inCache": true,
+  "_location": "/react2angular",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react2angular@git+https://kinging123@github.com/kinging123/react2angular.git",
+    "scope": null,
+    "escapedName": "react2angular",
+    "name": "react2angular",
+    "rawSpec": "git+https://kinging123@github.com/kinging123/react2angular.git",
+    "spec": "git+https://kinging123@github.com/kinging123/react2angular.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:kinging123/react2angular.git",
+      "sshUrl": "git+ssh://git@github.com/kinging123/react2angular.git",
+      "httpsUrl": "git+https://kinging123@github.com/kinging123/react2angular.git",
+      "gitUrl": "git://kinging123@github.com/kinging123/react2angular.git",
+      "shortcut": "github:kinging123/react2angular",
+      "directUrl": "https://kinging123@raw.githubusercontent.com/kinging123/react2angular/master/package.json"
+    }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/coatue-oss/react2angular.git"
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://kinging123@github.com/kinging123/react2angular.git#154385f4b1eec526bfd28746a5330f1216418573",
+  "_shasum": "5ade53e448461f70464a61910704017b6ff3fcf5",
+  "_shrinkwrap": null,
+  "_spec": "react2angular@git+https://kinging123@github.com/kinging123/react2angular.git",
+  "_where": "/Users/reuven/tline",
+  "author": {
+    "name": "Boris Cherny",
+    "email": "boris@performancejs.com"
   },
-  "keywords": [],
-  "author": "Boris Cherny <boris@performancejs.com>",
-  "license": "Apache2",
   "bugs": {
     "url": "https://github.com/coatue-oss/react2angular/issues"
   },
-  "homepage": "https://github.com/coatue-oss/react2angular#readme",
+  "dependencies": {
+    "@types/angular": "^1.6.7",
+    "@types/lodash.frompairs": "^4.0.1",
+    "@types/react": "^15.0.12",
+    "@types/react-dom": "^0.14.23",
+    "angular": "^1.6.2",
+    "lodash.frompairs": "^4.0.1",
+    "ngcomponent": "^2.0.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "description": "The easiest way to embed React components in Angular 1 apps!",
   "devDependencies": {
     "@types/angular-mocks": "^1.5.9",
     "@types/jasmine": "^2.5.43",
@@ -46,15 +93,30 @@
     "typescript": "^2.2.1",
     "watchify": "^3.9.0"
   },
-  "dependencies": {
-    "@types/angular": "^1.6.7",
-    "@types/lodash.frompairs": "^4.0.1",
-    "@types/react": "^15.0.12",
-    "@types/react-dom": "^0.14.23",
-    "angular": "^1.6.2",
-    "lodash.frompairs": "^4.0.1",
-    "ngcomponent": "^2.0.4",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  }
+  "gitHead": "154385f4b1eec526bfd28746a5330f1216418573",
+  "homepage": "https://github.com/coatue-oss/react2angular#readme",
+  "keywords": [],
+  "license": "Apache2",
+  "main": "index.js",
+  "main:esnext": "index.es2015.js",
+  "name": "react2angular",
+  "optionalDependencies": {},
+  "readme": "<img alt=\"React to Angular: The easiest way to use React components in Angular 1\" src=\"https://raw.githubusercontent.com/coatue-oss/react2angular/master/logo.png\" width=\"400px\" />\n\n# react2angular [![Build Status](https://img.shields.io/circleci/project/coatue-oss/react2angular.svg?branch=master&style=flat-square)](https://circleci.com/gh/coatue-oss/react2angular) [![NPM](https://img.shields.io/npm/v/react2angular.svg?style=flat-square)](https://www.npmjs.com/package/react2angular) [![Apache2](https://img.shields.io/npm/l/react2angular.svg?style=flat-square)](https://opensource.org/licenses/Apache2)\n\n> The easiest way to embed React components in Angular 1 apps! (opposite of [angular2react](https://github.com/coatue-oss/angular2react))\n\n## Installation\n\n```sh\nnpm install react2angular --save\n```\n\n## Usage\n\n### 1. Create a React component\n\n```js\nimport { Component } from 'react'\n\nclass MyComponent extends Component {\n  render() {\n    return <div>\n      <p>FooBar: {this.props.fooBar}</p>\n      <p>Baz: {this.props.baz}</p>\n    </div>\n  }\n}\n```\n\n### 2. Expose it to Angular\n\n```js\nimport { react2angular } from 'react2angular'\n\nangular\n  .module('myModule', [])\n  .component('myComponent', react2angular(MyComponent, ['fooBar', 'baz']))\n```\n\nNote: If you defined [`propTypes`](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) on your component, they will be used to compute component's bindings, and you can omit the 2nd argument:\n\n```js\n...\n  .component('myComponent', react2angular(MyComponent))\n```\n\nIf `propTypes` are defined and you passed in a 2nd argument, the argument will override `propTypes`.\n\n### 3. Use it in your Angular 1 code\n\n```html\n<my-component\n  foo-bar=\"3\"\n  baz=\"'baz'\"\n></my-component>\n```\n\n## Tests\n\n```sh\nnpm test\n```\n\n## License\n\nApache2\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coatue-oss/react2angular.git"
+  },
+  "scripts": {
+    "build": "npm run clean; tsc -d -m es2015 && mv ./index.js ./index.es2015.js && tsc -m commonjs -t es5",
+    "clean": "rm ./*.d.ts; rm ./*.map; exit 0",
+    "prepublish": "npm test",
+    "pretest": "npm run build",
+    "tdd": "npm-run-all -pr watch:*",
+    "test": "karma start --single-run",
+    "watch:test": "karma start",
+    "watch:ts": "tsc -w"
+  },
+  "typings": "index.d.ts",
+  "version": "1.1.2"
 }
